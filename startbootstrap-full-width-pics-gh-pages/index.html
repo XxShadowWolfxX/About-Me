@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ali Martinez | Profile</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/full-width-pics.css" rel="stylesheet">
+
+</head>
+
+<body class="body">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ali Martinez</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li><a href="https://www.facebook.com/XxShadowWolfxX">Facebook <span class="sr-only">(current)</span></a></li>
+        <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+        <li><a href="https://twitter.com/BloodBornWolf">Twitter</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Music Selection<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+                <audio id="myAudio">
+                <source src="http://66.90.93.122/ost/undertale-soundtrack-2015-/yujbivrbnj/071%20-%20Undertale.mp3" type="audio/mpeg">
+                </audio>
+                <a href="#" onclick="playAudio()">Undertale</a>
+            </li>
+            <li>
+                <audio id="myAudio2">
+                <source src="http://66.90.93.122/ost/undertale-soundtrack-2015-/arhdxsuuwh/087%20-%20Hopes%20and%20Dreams.mp3">
+                </audio>
+                <a href="#" onclick="playAudio2()">Hopes and Dreams</a>
+            </li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" onclick="pauseAudio() pauseAudio2()">Pause Music</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Code for profile pic and description -->
+    <header class="image-bg-fluid-height">
+            <img class="img-circle img-center" src="data:image/jpg;base64,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" alt="http://placehold.it/200x200&text=Photo">
+        <h2 class="header text-color">
+            Ali Martinez
+        </h2>
+        <h4 class="header">
+            Student at Hyde Leadership Charter School
+        </h4>
+        <h5 class="header">
+            <i>"Slowly making my way through school"</i>
+        </h5>
+    </header>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="section-heading">About Me</h1>
+                    <p class="lead section-lead">I am a 17 year old male high school senior, born in Manhattan but raised in the Bronx. I'm a timid person at first, but get to know me, you'll see I'm a goofy type of guy. Some hobbies I enjoy doing include coding, playing video games, and chatting with friends through Kik and/or Facebook.</p>
+                    <p class="section-paragraph">So why should I be accepted into TKH's Advanced JavaScript course? Well I am ardent about coding, not to mention determined. Even if the material is Advanced, it's an opportunity that I will be grateful just for getting an opportunity like this, and if I get accepted, I won't back out, I'll be all in. I also have a good amount of background knowledge in HTML, CSS, and JavaScript, though admitidly I may be a bit rusty, I'm a fast learner. I'm as friendly as can be, so fights or arguments won't be an issue unless it's work related, and I'll always be willing to help, even if I need help myself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Code for Slideshow -->
+    <aside class="image-bg-fixed-height">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="pokemon" src="https://pbs.twimg.com/media/C78E80AXgAAE3uo.jpg" height = 450>
+            <div class="text">I love Pokemon, my favorite one(s) would have to be all of the Eeveelutions!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img class="undertale" src="http://img14.deviantart.net/030c/i/2016/003/c/f/undertale_wallpaper_by_clydewuts-d9mn47v.jpg" height =450>
+            <div class="text">Undertale is my most recent favorite game, I just love the story!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img class="minecraft" src="https://s-media-cache-ak0.pinimg.com/originals/78/c5/44/78c54413c1948f4748d865e003be9e27.png" height=450>
+            <div class="text">Call me a kid or whatever, but Minecraft is my favorite multiplayer game, something about building things from scratch just seems great.. Oh yea, like coding!</div>
+          </div>
+
+</div>
+<br>
+    </aside>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Hobbies of mine and favorite movies</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="http://www.underconsideration.com/brandnew/archives/youtube_logo_detail.png" width= 150>
+                                </td>
+                                <td class="description">
+                                    <h2>Youtube</h2>
+                                    <p>Most of my time, I just go on Youtube and watch my favorite youtubers plaly video games, such as VanossGaming, SSundee, JackSepticEye, Markiplier, etc. I spend about a good 4-6 hours on Youtube everyday, with the exception of school days.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c522.png" width= 150>
+                                </td>
+                                <td class="description">
+                                    <h2>Messaging Friends</h2>
+                                    <p>Kik is my main source of messaging friends, the other is Facebook Messenger, but I don't use that as often anymore since Facebook likes banning me. I would have to say messaging friends is my 2nd favorite hobby, simply because I like talking to friends, but not all the time.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-1kwanc8_d26e6220.jpeg?region=0%2C0%2C1000%2C1314" width= 150>
+                                </td>
+                                <td class="description">
+                                    <h2>Favorite Movie: 1999 - Tarzan</h2>
+                                    <p>Tarzan has always been my favorite movie, ever since I was a baby. My mother would tell me how when she put Tarzan on the T.V, I would get all giggly and watch it over and over again. However, I haven't seen the new live remake, <i>The Legend of Tarzan</i>, and I don't think I want to. Personally, I hate live remakes, unless the trailer seems really really REALLY good. <i>Beauty and the Beast</i> for example, that's a movie I definitely want to watch, the trailer looks amazing, I can't wait to watch it!</I></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div class="row">
+                <div class="col-lg-12 footer">
+                    <p>Copyright &copy; Ali Martinez | Profile 2017</p>
+                    <p>Projects</p>
+                    <p><a href="https://preview.c9users.io/xxshadowwolfxx/hack_bca_3_project/startbootstrap-landing-page-1.0.5/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io" class="projects">NYC Teens</a> | <a href="https://preview.c9users.io/xxshadowwolfxx/voice/startbootstrap-agency-gh-pages/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io" class="projects">Voice</a></p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
